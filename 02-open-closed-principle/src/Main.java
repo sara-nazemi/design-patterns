@@ -2,6 +2,9 @@ import badPractice.BadExport;
 import bestPractice.BestExport;
 import bestPractice.ExcelExporter;
 import bestPractice.PdfExporter;
+import bestPracticeInterface.BestExportInterface;
+import bestPracticeInterface.ExcelExporterImpl;
+import bestPracticeInterface.PdfExporterImpl;
 import model.Student;
 
 public class Main {
@@ -21,5 +24,13 @@ public class Main {
 
         BestExport excel = new ExcelExporter(sara);
         excel.export();
+
+        // best practice with interface
+        BestExportInterface pdfInterface = new PdfExporterImpl();
+        pdfInterface.export(sara);
+
+        BestExportInterface excelInterface = new ExcelExporterImpl();
+        excelInterface.export(sara);
+
     }
 }
