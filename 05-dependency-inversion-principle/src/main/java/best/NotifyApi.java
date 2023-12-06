@@ -1,5 +1,8 @@
 package best;
 
+import log.LoggerService;
+import log.LoggerServiceImpl;
+
 public class NotifyApi {
 
     private LoggerService loggerService;
